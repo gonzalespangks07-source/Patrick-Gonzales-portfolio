@@ -1,0 +1,167 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: #f4f4f9;
+  color: #333;
+  text-align: center;
+  transition: background 0.4s, color 0.4s;
+}
+
+header {
+  background: #1e1e2f;
+  color: #fff;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  color: #ddd;
+  text-decoration: none;
+  margin: 0 18px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  color: #ffcc00;
+}
+
+.toggle-btn {
+  margin-top: 15px;
+  padding: 10px 16px;
+  background: #ffcc00;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.toggle-btn:hover {
+  background: #e6b800;
+}
+
+/* Sections */
+section {
+  display: none;
+  padding: 60px 20px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+section.active {
+  display: block;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.1rem;
+  max-width: 750px;
+  margin: 0 auto 20px;
+  line-height: 1.6;
+}
+
+/* Responsive Images */
+.responsive {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.responsive:hover {
+  transform: scale(1.05);
+}
+
+/* Activities Grid */
+.activities-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.activity-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
+  width: 320px;
+  transition: transform 0.3s ease;
+}
+
+.activity-card:hover {
+  transform: translateY(-6px);
+}
+
+.activity-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+/* Footer */
+footer {
+  margin-top: 50px;
+  padding: 20px;
+  background: #1e1e2f;
+  color: #fff;
+}
+
+/* Dark Mode */
+body.dark {
+  background: #121212;
+  color: #eaeaea;
+}
+
+body.dark header {
+  background: #000;
+}
+
+body.dark nav a {
+  color: #aaa;
+}
+
+body.dark nav a.active,
+body.dark nav a:hover {
+  color: #ffcc00;
+}
+
+body.dark .activity-card {
+  background: #1e1e1e;
+  color: #f0f0f0;
+}
+
+body.dark footer {
+  background: #000;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
